@@ -7,14 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Editor_de_Texto
 {
     public partial class Form1 : Form
     {
+        StreamReader leitura = null;
         public Form1()
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Novo()
+        {
+            
+        }
+
     }
 }
