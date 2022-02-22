@@ -74,6 +74,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -113,6 +114,7 @@
             this.btn_novo.Name = "btn_novo";
             this.btn_novo.Size = new System.Drawing.Size(23, 22);
             this.btn_novo.Text = "Novo";
+            this.btn_novo.Click += new System.EventHandler(this.btn_novo_Click);
             // 
             // btn_abrir
             // 
@@ -122,6 +124,7 @@
             this.btn_abrir.Name = "btn_abrir";
             this.btn_abrir.Size = new System.Drawing.Size(23, 22);
             this.btn_abrir.Text = "Abrir";
+            this.btn_abrir.Click += new System.EventHandler(this.btn_abrir_Click);
             // 
             // btn_salvar
             // 
@@ -131,6 +134,7 @@
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(23, 22);
             this.btn_salvar.Text = "Salvar";
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
             // btn_imprimir
             // 
@@ -283,20 +287,23 @@
             // novoToolStripMenuItem
             // 
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.novoToolStripMenuItem.Text = "Novo";
+            this.novoToolStripMenuItem.Click += new System.EventHandler(this.novoToolStripMenuItem_Click);
             // 
             // copiarToolStripMenuItem
             // 
             this.copiarToolStripMenuItem.Name = "copiarToolStripMenuItem";
-            this.copiarToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.copiarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.copiarToolStripMenuItem.Text = "Abrir";
+            this.copiarToolStripMenuItem.Click += new System.EventHandler(this.copiarToolStripMenuItem_Click);
             // 
             // savarToolStripMenuItem
             // 
             this.savarToolStripMenuItem.Name = "savarToolStripMenuItem";
-            this.savarToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.savarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.savarToolStripMenuItem.Text = "Savar";
+            this.savarToolStripMenuItem.Click += new System.EventHandler(this.savarToolStripMenuItem_Click);
             // 
             // imprimirToolStripMenuItem
             // 
@@ -418,15 +425,28 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "txt";
+            // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(0, 61);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(788, 387);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -490,6 +510,7 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
