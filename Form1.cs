@@ -131,6 +131,20 @@ namespace Editor_de_Texto
             richTextBox1.Paste();
         }
 
+        private void alinhaEsquerda()
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Left;
+        }
+
+        private void alinharDireita()
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Right;
+        }
+
+        private void alinharCentro()
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
+        }
         private void copiarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Copiar();
@@ -145,6 +159,7 @@ namespace Editor_de_Texto
         {
             Copiar();
         }
+
         private void Negrito()
         {
             //Declarando variáveis para armazenar o que está no richTextBox
@@ -316,6 +331,51 @@ namespace Editor_de_Texto
         private void btn_sublinhado_Click(object sender, EventArgs e)
         {
             Sublinhado();
+        }
+
+        private void btn_centralizar_Click(object sender, EventArgs e)
+        {
+            alinharCentro();
+        }
+
+        private void btn_direita_Click(object sender, EventArgs e)
+        {
+            alinharDireita();
+        }
+
+        private void btn_esquerda_Click(object sender, EventArgs e)
+        {
+            alinhaEsquerda();
+        }
+
+        private void negritoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Negrito();
+        }
+
+        private void itálicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Italico();
+        }
+
+        private void sublinhadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sublinhado();
+        }
+
+        private void centralizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            alinharCentro();
+        }
+
+        private void esquerdaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            alinhaEsquerda();
+        }
+
+        private void direitaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            alinharDireita();
         }
     }
 }
